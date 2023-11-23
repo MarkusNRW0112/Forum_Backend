@@ -59,7 +59,7 @@ public class SubforumController {
     }
 
     @GetMapping(value = "/search/{subName}")
-    public ResponseEntity<List<ThreadModel>> getAllThreadsBySubname(@PathVariable("subName") String subName){
-        return new ResponseEntity<List<ThreadModel>>(SUBSERVICE.getAllThreadsBySubname(subName), HttpStatus.OK);
+    public ResponseEntity<List<?>> getAllThreadsBySubname(@PathVariable("subName") String subName){
+        return new ResponseEntity<List<?>>(SUBSERVICE.getAllThreadsBySubname(subName), HttpStatus.OK);
     }
 }

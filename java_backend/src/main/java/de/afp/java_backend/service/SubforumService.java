@@ -43,8 +43,10 @@ public class SubforumService {
         return SUBREPO.findById(id);
     }
 
-    public List<ThreadModel> getAllThreadsBySubname(String subname){
-        List<ThreadModel> sub = SUBREPO.getAllThreadsBySubname(subname);
+    public List<?> getAllThreadsBySubname(String subname){
+        List<?> sub = SUBREPO.getAllThreadsBySubname(subname);
+        System.out.println("HAAAAAAAALOOOOOOO");
+        System.out.println("HAAAAAAAALOOOOOOO");
         System.out.println(sub);
         return sub;
     }
